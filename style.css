@@ -88,14 +88,14 @@ main .input-container {
 }
 
 main .input-container input {
-  flex-grow: 1;
+  flex: 1;
   padding: 10px 20px;
   background: transparent;
   border: none;
 }
 
 main .input-container input::placeholder {
-  opacity: .5;
+  opacity: .6;
   font-weight: var(--fw--semi-bold);
   color: var(--clr--primary-desatured-red);
 }
@@ -107,4 +107,89 @@ main .input-container button {
   border: none;
   border-radius: 40px;
   background: linear-gradient(135deg, var(--clr--gradient-desatured-pink), var(--clr--gradient-soft-pink))
+}
+
+@media (min-width: 1440px) {
+  body {
+    background: url("./images/bg-pattern-desktop.svg") no-repeat left;
+    background-size: cover;
+    font-size: 1.9rem;
+  }
+
+  .container {
+    max-width: none;
+    display: flex;
+    align-items: stretch;
+  }
+
+
+  .container .desktop-container {
+    width: 100%;
+    max-width: 60vw;
+    height: 100%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .desktop-container .content {
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .desktop-container .content main {
+    text-align: left;
+  }
+
+  .container .desktop-container .content main p {
+    line-height: 1.8;
+  }
+
+  .container header {
+    padding: 3.5rem;
+    margin-bottom: auto;
+  }
+  
+  .title-primary {
+    font-size: 7rem;
+    letter-spacing: 15px;
+  }
+
+  .title-span {
+    font-size: 7.5rem;
+  }
+
+  .container section img {
+    display: none;
+    visibility: hidden;
+  }
+
+  main .input-container input::placeholder {
+    font-size: 1.9rem;
+    font-weight: var(--fw--regular);
+  }
+
+  main .input-container input {
+    font-size: 1.8rem;
+    padding: 15px 30px;
+  }
+
+  main .input-container button {
+    width: 120px;
+    height: 60px;
+  }
+
+  main .input-container button img {
+    width: 17px;
+    height: 22px;
+  }
+
+  .hero-desktop {
+    flex: 1;
+    background: url("./images/hero-desktop.jpg") no-repeat;
+    background-size: cover;
+  }
 }
