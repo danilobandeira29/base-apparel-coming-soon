@@ -80,16 +80,26 @@ main {
 }
 
 main .input-container {
-  border: 1px solid var(--clr--primary-desatured-red);
-  border-right: none;
+  position: relative;
+  border: 2px solid var(--clr--primary-desatured-red);
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 40px;
   margin-bottom: 3.5rem;
 }
 
+main .input-container.error::after {
+  content: "Please provide a valid email";
+  position: absolute;
+  color: var(--clr--primary-soft-red);
+  bottom: -30px;
+  left: 20px;
+}
+
 main .input-container input {
   flex: 1;
-  padding: 10px 20px;
+  padding: 10px 0 10px 20px;
   background: transparent;
   border: none;
 }
@@ -98,6 +108,19 @@ main .input-container input::placeholder {
   opacity: .6;
   font-weight: var(--fw--semi-bold);
   color: var(--clr--primary-desatured-red);
+}
+
+main .input-container > img {
+  width: 25px;
+  height: 25px;
+  margin: 0 8px;
+  display: none;
+  opacity: 0;
+}
+
+main .input-container .img-error {
+  display: block;
+  opacity: 1;
 }
 
 main .input-container button {
@@ -174,7 +197,12 @@ main .input-container button {
 
   main .input-container input {
     font-size: 1.8rem;
-    padding: 15px 30px;
+    padding: 15px 0 15px 30px;
+  }
+
+  main .input-container::after {
+    bottom: -30px;
+    left: 30px;
   }
 
   main .input-container button {
