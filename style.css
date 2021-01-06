@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --clr--gradient-white: hsl(0, 0%, 100%);
+  --clr--gradient-soft-white: hsl(0, 100%, 98%);
+
+  --clr--gradient-desatured-pink: hsl(0, 80%, 86%);
+  --clr--gradient-soft-pink: hsl(0, 74%, 74%);
+
+  --clr--neutral-grayish-red: hsl(0, 6%, 24%);
+  --clr--primary-desatured-red: hsl(0, 36%, 70%);
+  --clr--primary-soft-red: hsl(0, 93%, 68%);
+
+  --ff--primary: 'Josefin Sans', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.7rem;
+  font-family: var(--ff--primary);
+}
