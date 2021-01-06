@@ -3,15 +3,18 @@
 :root {
   --clr--gradient-white: hsl(0, 0%, 100%);
   --clr--gradient-soft-white: hsl(0, 100%, 98%);
-
   --clr--gradient-desatured-pink: hsl(0, 80%, 86%);
   --clr--gradient-soft-pink: hsl(0, 74%, 74%);
 
   --clr--neutral-grayish-red: hsl(0, 6%, 24%);
+
   --clr--primary-desatured-red: hsl(0, 36%, 70%);
   --clr--primary-soft-red: hsl(0, 93%, 68%);
-
+  
   --ff--primary: 'Josefin Sans', sans-serif;
+  --fw--light: 300;
+  --fw--regular: 400;
+  --fw--semi-bold: 600;
 }
 
 * {
@@ -27,4 +30,81 @@ html {
 body {
   font-size: 1.7rem;
   font-family: var(--ff--primary);
+  background: linear-gradient(135deg, var(--clr--gradient-white), var(--clr--gradient-soft-white));
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container header {
+  padding: 3.5rem;
+}
+
+.container section img {
+  max-width: 375px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+main {
+  text-align: center;
+  padding: 3.5rem;
+}
+
+.title-primary {
+  font-size: 4.5rem;
+  font-weight: var(--fw--light);
+  color: var(--clr--primary-desatured-red);
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.title-span {
+  font-size: 5rem;
+  font-weight: var(--fw--semi-bold);
+  color: var(--clr--neutral-grayish-red);
+}
+
+.text-primary {
+  font-weight: var(--fw--regular);
+  color: var(--clr--primary-desatured-red);
+  line-height: 1.6;
+  margin-bottom: 3.5rem;
+}
+
+main .input-container {
+  border: 1px solid var(--clr--primary-desatured-red);
+  border-right: none;
+  display: flex;
+  border-radius: 40px;
+  margin-bottom: 3.5rem;
+}
+
+main .input-container input {
+  flex-grow: 1;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+}
+
+main .input-container input::placeholder {
+  opacity: .5;
+  font-weight: var(--fw--semi-bold);
+  color: var(--clr--primary-desatured-red);
+}
+
+main .input-container button {
+  cursor: pointer;
+  width: 70px;
+  height: 50px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(135deg, var(--clr--gradient-desatured-pink), var(--clr--gradient-soft-pink))
 }
